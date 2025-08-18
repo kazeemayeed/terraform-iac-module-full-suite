@@ -1,30 +1,30 @@
-Usage Instructions
+# **Usage Instructions**
 
 Initial Setup:
 bash# Make scripts executable
 chmod +x setup.sh deploy.sh
 
-# Run initial setup (creates S3 bucket and DynamoDB table for state)
+**Run initial setup (creates S3 bucket and DynamoDB table for state)**
 ./setup.sh
 
 Deploy to Development:
 bash# Plan deployment
 ./deploy.sh dev plan
 
-# Apply deployment
+**Apply deployment**
 ./deploy.sh dev apply
 
 Deploy to Production:
 bash# Copy and customize variables
 cp environments/prod/terraform.tfvars.example environments/prod/terraform.tfvars
 
-# Edit the file with your production values
+**Edit the file with your production values**
 vim environments/prod/terraform.tfvars
 
-# Plan deployment
+**Plan deployment**
 ./deploy.sh prod plan
 
-# Apply deployment
+**Apply deployment**
 ./deploy.sh prod apply
 
 Destroy Resources:
@@ -46,7 +46,9 @@ create_before_destroy = true
 }
 }
 
-Application Load Balancer Security Group
+**Application Load Balancer Security Group**
+
+```hcl
 resource "aws_security_group" "alb" {
 name_prefix = "${var.name_prefix}-alb-"
 description = "Security group for Application Load Balancer"
@@ -81,7 +83,11 @@ lifecycle {
 create_before_destroy = true
 }
 }
-Database Security Group
+```
+
+**Database Security Group**
+
+```hcl
 resource "aws_security_group" "database" {
 count = var.create_database_sg ? 1 : 0
 name_prefix = "${var.name_prefix}-database-"
@@ -117,7 +123,11 @@ lifecycle {
 create_before_destroy = true
 }
 }
-Cache Security Group
+```
+
+**Cache Security Group**
+
+```hcl
 resource "aws_security_group" "cache" {
 count = var.create_cache_sg ? 1 : 0
 name_prefix = "${var.name_prefix}-cache-"
@@ -147,3 +157,4 @@ lifecycle {
 create_before_destroy = true
 }
 }
+```
