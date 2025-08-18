@@ -1,0 +1,52 @@
+# General Configuration
+aws_region   = "us-west-2"
+environment  = "prod"
+project_name = "myapp"
+
+# VPC Configuration
+vpc_cidr                = "10.1.0.0/16"
+public_subnet_cidrs     = ["10.1.1.0/24", "10.1.2.0/24"]
+private_subnet_cidrs    = ["10.1.10.0/24", "10.1.20.0/24"]
+database_subnet_cidrs   = ["10.1.100.0/24", "10.1.110.0/24"]
+enable_nat_gateway      = true
+enable_vpc_flow_log     = true
+
+# Security Configuration
+enable_ssh              = false  # Disabled in production
+ssh_ingress_cidrs      = ["10.0.0.0/8"]  # Restrict to VPN/bastion
+create_database_sg     = true
+create_cache_sg        = false
+
+# IAM Configuration
+enable_ssm_access      = true
+create_autoscaling_role = true
+
+# EC2 Configuration
+instance_type          = "t3.small"  # Larger instance for production
+enable_detailed_monitoring = true
+
+# Auto Scaling Configuration
+asg_min_size           = 2
+asg_max_size           = 10
+asg_desired_capacity   = 3
+enable_scaling_policies = true
+
+# Load Balancer Configuration
+enable_alb_access_logs = true
+alb_access_logs_bucket = "myapp-prod-alb-logs"
+
+# RDS Configuration
+create_rds             = true
+rds_engine            = "mysql"
+rds_engine_version    = "8.0.35"
+rds_instance_class    = "db.t3.small"
+rds_allocated_storage = 100
+rds_database_name     = "myapp_prod"
+rds_master_username   = "admin"
+rds_backup_retention_period = 30
+rds_multi_az          = true
+rds_deletion_protection = true
+
+# S3 Configuration
+create_s3_bucket      = true
+s3_versioning_enabled = true
