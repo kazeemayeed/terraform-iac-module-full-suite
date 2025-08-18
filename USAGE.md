@@ -85,7 +85,7 @@ create_before_destroy = true
 }
 ---
 
-**Database Security Group**
+# **Database Security Group**
 
 
 resource "aws_security_group" "database" {
