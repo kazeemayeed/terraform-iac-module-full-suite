@@ -1,4 +1,4 @@
-**Usage Instructions**
+# **Usage Instructions**
 
 Initial Setup:
 bash# Make scripts executable
