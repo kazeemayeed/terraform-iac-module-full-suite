@@ -46,9 +46,9 @@ create_before_destroy = true
 }
 }
 
-**Application Load Balancer Security Group**
+# **Application Load Balancer Security Group**
 
----
+```hcl
 resource "aws_security_group" "alb" {
 name_prefix = "${var.name_prefix}-alb-"
 description = "Security group for Application Load Balancer"
