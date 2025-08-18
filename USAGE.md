@@ -83,11 +83,11 @@ lifecycle {
 create_before_destroy = true
 }
 }
----
+```
 
 # **Database Security Group**
 
-
+```hcl
 resource "aws_security_group" "database" {
 count = var.create_database_sg ? 1 : 0
 name_prefix = "${var.name_prefix}-database-"
@@ -123,7 +123,11 @@ lifecycle {
 create_before_destroy = true
 }
 }
-Cache Security Group
+```
+
+# **Cache Security Group**
+
+```hcl
 resource "aws_security_group" "cache" {
 count = var.create_cache_sg ? 1 : 0
 name_prefix = "${var.name_prefix}-cache-"
@@ -153,3 +157,4 @@ lifecycle {
 create_before_destroy = true
 }
 }
+```
