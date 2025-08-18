@@ -46,7 +46,9 @@ create_before_destroy = true
 }
 }
 
-Application Load Balancer Security Group
+**Application Load Balancer Security Group**
+
+---
 resource "aws_security_group" "alb" {
 name_prefix = "${var.name_prefix}-alb-"
 description = "Security group for Application Load Balancer"
@@ -81,7 +83,11 @@ lifecycle {
 create_before_destroy = true
 }
 }
-Database Security Group
+---
+
+**Database Security Group**
+
+
 resource "aws_security_group" "database" {
 count = var.create_database_sg ? 1 : 0
 name_prefix = "${var.name_prefix}-database-"
