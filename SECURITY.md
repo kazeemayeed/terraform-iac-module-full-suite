@@ -42,7 +42,7 @@ git checkout -b fix/<short-description>
   - Use `sensitive = true` for variables that hold secrets.
   - Apply least-privilege IAM roles and policies.
 
-- 🛡 **Validation & Scanning**
+- **Validation & Scanning**
   - Run before committing:
     ```bash
     terraform fmt -recursive
