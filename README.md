@@ -6,25 +6,25 @@ This repository offers a collection of Terraform modules that encapsulate common
 
 **Modular Design**: Each module is self-contained, focusing on a specific resource or service, ensuring clarity and reusability.
 
-Cross-Platform Compatibility: Designed to work seamlessly with multiple cloud providers, including AWS, Azure, and GCP.
+**Cross-Platform Compatibility**: Designed to work seamlessly with multiple cloud providers, including AWS, Azure, and GCP.
 
-Scalable Architecture: Built with scalability in mind, allowing users to easily extend and adapt modules to their needs.
+**Scalable Architecture**: Built with scalability in mind, allowing users to easily extend and adapt modules to their needs.
 
-Best Practices: Incorporates Terraform best practices, including proper state management, variable usage, and output definitions.
+**Best Practices**: Incorporates Terraform best practices, including proper state management, variable usage, and output definitions.
 
 **Modules Included**
 
 The suite includes modules for:
 
-Compute Resources: EC2 instances, virtual machines, and autoscaling groups.
+**Compute Resources**: EC2 instances, virtual machines, and autoscaling groups.
 
-Networking: VPCs, subnets, security groups, and load balancers.
+**Networking**: VPCs, subnets, security groups, and load balancers.
 
-Storage: S3 buckets, Azure Blob Storage, and Google Cloud Storage.
+**Storage**: S3 buckets, Azure Blob Storage, and Google Cloud Storage.
 
-Identity & Access Management: IAM roles, policies, and service accounts.
+**Identity & Access Management**: IAM roles, policies, and service accounts.
 
-Databases: RDS, DynamoDB, and Cloud SQL instances.
+**Databases**: RDS, DynamoDB, and Cloud SQL instances.
 
 Monitoring & Logging: CloudWatch, Azure Monitor, and Stackdriver configurations.
 
@@ -32,49 +32,49 @@ Monitoring & Logging: CloudWatch, Azure Monitor, and Stackdriver configurations.
 
 To utilize a module from this suite, follow these steps:
 
-Clone the Repository:
+**Clone the Repository**:
 
-git clone https://github.com/kazeemayeed/terraform-iac-module-full-suite.git
-cd terraform-iac-module-full-suite
-
-
-Navigate to the Desired Module:
-
-cd modules/<module-name>
+> git clone https://github.com/kazeemayeed/terraform-iac-module-full-suite.git
+> cd terraform-iac-module-full-suite
 
 
-Initialize Terraform:
+**Navigate to the Desired Module**:
 
-terraform init
+> cd modules/<module-name>
 
 
-Configure Variables:
+**Initialize Terraform**:
+
+> terraform init
+
+
+**Configure Variables**:
 
 Copy the terraform.tfvars.example file to terraform.tfvars and modify the values as needed.
 
-cp terraform.tfvars.example terraform.tfvars
+> cp terraform.tfvars.example terraform.tfvars
 
 
-Plan the Deployment:
+**Plan the Deployment**:
 
-terraform plan
+> terraform plan
 
 
-Apply the Configuration:
+**Apply the Configuration**:
 
-terraform apply
+> terraform apply
 
 **Example**
 
 Here's an example of how to use the EC2 module:
 
-module "ec2_instance" {
-  source = "../modules/aws/ec2"
+> module "ec2_instance" {
+>   source = "../modules/aws/ec2"
 
-  instance_type = "t2.micro"
-  ami_id        = "ami-0c55b159cbfafe1f0"
-  region        = "us-east-1"
-}
+>   instance_type = "t2.micro"
+>   ami_id        = "ami-0c55b159cbfafe1f0"
+>   region        = "us-east-1"
+> }
 
 **Requirements**
 
