@@ -88,9 +88,9 @@ Access to the desired cloud provider's console and API
 
 Each module provides outputs that can be utilized in other parts of your infrastructure. For example, the EC2 module might output:
 
-output "instance_id" {
-  value = aws_instance.this.id
-}
+> output "instance_id" {
+>   value = aws_instance.this.id
+> }
 
 **Testing**
 
@@ -98,17 +98,17 @@ To ensure the modules function as expected:
 
 Navigate to the module directory:
 
-cd modules/<module-name>
+> cd modules/<module-name>
 
 
 Initialize Terraform:
 
-terraform init
+> terraform init
 
 
 Apply the configuration:
 
-terraform apply
+> terraform apply
 
 
 Verify the resources in your cloud provider's console.
