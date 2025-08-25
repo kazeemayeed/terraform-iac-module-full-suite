@@ -4,7 +4,7 @@ This repository offers a collection of Terraform modules that encapsulate common
 
 **Features**
 
-Modular Design: Each module is self-contained, focusing on a specific resource or service, ensuring clarity and reusability.
+***Modular Design***: Each module is self-contained, focusing on a specific resource or service, ensuring clarity and reusability.
 
 Cross-Platform Compatibility: Designed to work seamlessly with multiple cloud providers, including AWS, Azure, and GCP.
 
