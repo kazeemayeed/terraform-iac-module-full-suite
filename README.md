@@ -19,6 +19,20 @@ module "full_suite" {
 }
 **Inputs**
 
+| Name          | Description                        | Type   | Default       | Required |
+| ------------- | ---------------------------------- | ------ | ------------- | -------- |
+| `environment` | Environment name (e.g., dev, prod) | string | `"dev"`       | no       |
+| `region`      | AWS region to deploy resources     | string | `"us-east-1"` | no       |
+
+**Outputs**
+
+| Name                 | Description               |
+| -------------------- | ------------------------- |
+| `vpc_id`             | The ID of the VPC created |
+| `subnet_ids`         | List of subnet IDs        |
+| `security_group_ids` | List of security groups   |
+
+
 Example
 provider "aws" {
   region = "us-east-1"
