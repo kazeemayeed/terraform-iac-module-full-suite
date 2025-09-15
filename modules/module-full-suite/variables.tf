@@ -1,5 +1,3 @@
-# modules/module-full-suite/variables.tf
-
 # Network Module Variables
 variable "vpc_cidr" {
   description = "CIDR block for VPC"
@@ -55,14 +53,10 @@ variable "desired_capacity" {
 }
 
 # Common Variables
-variable "tags" {
-  description = "A map of tags to assign to the resources"
-  type        = map(string)
-  default = {
-    Environment = "dev"
-    Project     = "terraform-full-suite"
-    ManagedBy   = "terraform"
-  }
+variable "environment" {
+  description = "Environment name (e.g., dev, staging, prod)"
+  type        = string
+  default     = "dev"
 }
 
 variable "project_name" {
@@ -71,8 +65,18 @@ variable "project_name" {
   default     = "terraform-full-suite"
 }
 
-variable "environment" {
-  description = "Environment name"
+variable "region" {
+  description = "AWS region to deploy resources"
   type        = string
-  default     = "dev"
+  default     = "us-east-1"
+}
+
+variable "tags" {
+  description = "A map of tags to assign to the resources"
+  type        = map(string)
+  default = {
+    Environment = "dev"
+    Project     = "terraform-full-suite"
+    ManagedBy   = "terraform"
+  }
 }
