@@ -69,17 +69,17 @@ variable "project_name" {
 }
 
 # Outputs
-output "vpc_id" {
-  description = "ID of the VPC"
-  value       = module.full_suite.vpc_id
-}
+#output "vpc_id" {
+#  description = "ID of the VPC"
+#  value       = module.full_suite.vpc_id
+#}
 
-output "website_url" {
-  description = "URL to access the website"
-  value       = module.full_suite.website_url
-}
+#output "website_url" {
+#  description = "URL to access the website"
+#  value       = module.full_suite.website_url
+#}
 
-output "load_balancer_dns" {
-  description = "DNS name of the load balancer"
-  value       = module.full_suite.load_balancer_dns
-}
+#output "load_balancer_dns" {
+#  description = "DNS name of the load balancer"
+#  value       = module.full_suite.load_balancer_dns
+#}
