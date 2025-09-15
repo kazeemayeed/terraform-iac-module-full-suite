@@ -44,3 +44,4 @@ module "full_suite" {
   environment = "dev"
   region      = "us-east-1"
 }
+
