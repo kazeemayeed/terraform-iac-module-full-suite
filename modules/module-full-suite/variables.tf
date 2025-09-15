@@ -33,7 +33,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "Name of the AWS key pair for EC2 instances"
   type        = string
-#  default     = null
+  default     = null
 }
 
 variable "min_size" {
