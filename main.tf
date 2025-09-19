@@ -1,5 +1,3 @@
-# main.tf (in your project ROOT directory, NOT in modules/)
-
 terraform {
   required_version = ">= 1.0"
   required_providers {
