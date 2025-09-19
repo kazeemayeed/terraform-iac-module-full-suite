@@ -1,5 +1,3 @@
-# modules/module-full-suite/main.tf - FIXED VERSION
-
 terraform {
   required_version = ">= 1.0"
   required_providers {
